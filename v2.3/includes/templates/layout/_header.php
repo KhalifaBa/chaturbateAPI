@@ -39,12 +39,12 @@
 							<nav id="menu">
 								<ul class="links">
 									<li><a href="' . BASEHREF . '">All Cams</a></li>
-									<li><a href="' . BASEHREF . 'cams/hd" class="' . ( ($link == "hd") ? "active"   : "") . '">HD Cams</a></li>
-									<li><a href="' . BASEHREF . 'cams/new" class="' . ( ($link == "new") ? "active"   : "") . '">New Cams</a></li>					
-									<li><a href="' . BASEHREF . 'cams/female" class="' . ( ($link == "female") ? "active"   : "") . '">Female Cams</a></li>
-									<li><a href="' . BASEHREF . 'cams/male" class="' . ( ($link == "male") ? "active"   : "") . '">Male Cams</a></li>
-									<li><a href="' . BASEHREF . 'cams/couple" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
-									<li><a href="' . BASEHREF . 'cams/shemale" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
+									<li><a href="' . BASEHREF . 'hd.php" class="' . ( ($link == "hd") ? "active"   : "") . '">HD Cams</a></li>
+									<li><a href="' . BASEHREF . 'new.php" class="' . ( ($link == "new") ? "active"   : "") . '">New Cams</a></li>					
+									<li><a href="' . BASEHREF . 'female.php" class="' . ( ($link == "female") ? "active"   : "") . '">Female Cams</a></li>
+									<li><a href="' . BASEHREF . 'male.php" class="' . ( ($link == "male") ? "active"   : "") . '">Male Cams</a></li>
+									<li><a href="' . BASEHREF . 'couple.php" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
+									<li><a href="' . BASEHREF . 'shemale.php" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
 									<li><a href="' . LINK_BROADCAST . '" class="external">Broadcast Your Cam!</a></li>
 								</ul>
 								<ul class="actions vertical">

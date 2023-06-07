@@ -21,7 +21,7 @@
 							</div>
 
 							<ul class="alt">
-								<li><a href="' . BASEHREF . 'cams/teen" class="button big fit">More Teen Cams</a></li>
+								<li><a href="' . BASEHREF . 'teen.php" class="button big fit">More Teen Cams</a></li>
 							</ul>
 						</section>
 
@@ -37,7 +37,7 @@
 							</div>
 
 							<ul class="alt">
-								<li><a href="' . BASEHREF . 'cams/middleage" class="button big fit">More Milf Cams</a></li>
+								<li><a href="' . BASEHREF . 'middleage.php" class="button big fit">More Milf Cams</a></li>
 							</ul>
 						</section>
 
@@ -53,7 +53,7 @@
 							</div>
 
 							<ul class="alt">
-								<li><a href="' . BASEHREF . 'cams/birthday" class="button big fit">More Birthday Cams</a></li>
+								<li><a href="' . BASEHREF . 'birthday.php" class="button big fit">More Birthday Cams</a></li>
 							</ul>
 						</section>
 

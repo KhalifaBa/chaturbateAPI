@@ -4,21 +4,21 @@
 	// Server Settings
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-		define ( 'BASEHREF',		'http://your.tld/' );		// The Url path o the index.php
+		define ( 'BASEHREF',		'http://localhost/Chaturbate-API/camgasm/' );		// The Url path o the index.php
 		define ( 'BASEPATH',		getcwd() );									// The file directory path to index.php
 		define ( 'FLATFILE',		BASEPATH . '/includes/data/feed.xml');		// Name of file to store xml feed into
-		define ( 'USECRON',			false );										// If you would like to update via cron set this to true.
+		define ( 'USECRON',			true );										// If you would like to update via cron set this to true.
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Chaturbate Settings
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		define ( 'USER',			'blogbabes' );								// Your Chaturbate Username ( this is only useful if you embed a personal chatroom )
-		define ( 'AFFID',			'7iFy8' );									// Chaturbate Affiliate ID
+		define ( 'AFFID',			'827SM' );									// Chaturbate Affiliate ID
 		define ( 'TRACK',			'HILLIPINO' );								// Chaturbate Campaign for Tracking
 		define ( 'MODE',			'revshare' );								// ( revshare, or tokens )
 		define ( 'ROOM',			'top' );									// Which featured chatroom to embed ( top, male, transexual, personal, NULL )
-		define ( 'CBWL',			'https://camgasm.com' );					// If you are wanting to change the domain to match one of your hosted whitelabels,
+		define ( 'CBWL',			'https://chaturbate.com' );					// If you are wanting to change the domain to match one of your hosted whitelabels,
 																				// enter the domain here. eg ( http://www.yourdomain.com ) the default is 'https://camgasm.com'
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,7 +113,7 @@
 					echo '
 						' . $model . '\'s Live Cam Show
 					';
-					break;																									
+					break;
 
 			}
 			

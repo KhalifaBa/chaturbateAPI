@@ -4,6 +4,10 @@
 
 		require('includes/settings.php');
 		require('includes/functions.php');
+        get_xml();
+
+
+
 
 	// Layout Templates
 
@@ -35,7 +39,7 @@
 	// Get Pages
 
 		$arg1 = array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;
-		
+
 		$core = new axl_Core();
 		
 		$core->setHeaderFunc('tpl_header');

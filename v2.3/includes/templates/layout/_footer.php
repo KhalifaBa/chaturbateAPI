@@ -12,19 +12,19 @@
 						<div class="column">		
 							<h3>What\'s Hot</h3>
 							<ul class="alt">
-								<li><a href="' . BASEHREF . 'cams/female">Female Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/couple">Couple Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/hd">HD Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/new">New Cams</a></li>
+								<li><a href="' . BASEHREF . 'female.php">Female Cams</a></li>
+								<li><a href="' . BASEHREF . 'couple.php">Couple Cams</a></li>
+								<li><a href="' . BASEHREF . 'hd.php">HD Cams</a></li>
+								<li><a href="' . BASEHREF . 'new.php">New Cams</a></li>
 							</ul>
 						</div>
 						<div class="column">	
 							<h3>More Cool Stuff</h3>
 							<ul class="alt">
-								<li><a href="' . BASEHREF . 'cams/teen">Teen Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/middleage">Milf Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/mature">Mature Cams</a></li>
-								<li><a href="' . BASEHREF . 'cams/senior">Granny Cams</a></li>
+								<li><a href="' . BASEHREF . 'teen.php">Teen Cams</a></li>
+								<li><a href="' . BASEHREF . 'middleage.php">Milf Cams</a></li>
+								<li><a href="' . BASEHREF . 'mature.php">Mature Cams</a></li>
+								<li><a href="' . BASEHREF . 'senior.php">Granny Cams</a></li>
 							</ul>
 						</div>
 						<div class="column">	

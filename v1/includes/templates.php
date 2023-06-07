@@ -48,10 +48,10 @@
 							
 							<nav id="nav">
 								<ul class="actions options">
-									<li><a href="' . BASEHREF . 'cams/female" class="' . ( ($link == "female") ? "active"   : "") . '">Females</a></li>
-									<li><a href="' . BASEHREF . 'cams/male" class="' . ( ($link == "male") ? "active"   : "") . '">Males</a></li>
-									<li><a href="' . BASEHREF . 'cams/couple" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
-									<li><a href="' . BASEHREF . 'cams/shemale" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
+									<li><a href="' . BASEHREF . 'female.php" class="' . ( ($link == "female") ? "active"   : "") . '">Females</a></li>
+									<li><a href="' . BASEHREF . 'male.php" class="' . ( ($link == "male") ? "active"   : "") . '">Males</a></li>
+									<li><a href="' . BASEHREF . 'couple.php" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
+									<li><a href="' . BASEHREF . 'shemale.php" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
 									<li><a href="' . LINK_BROADCAST . '">Broadcast Your Cam!</a></li>
 									<li><a href="' . LINK_AFF . '">Affiliate Program</a></li>
 									<li><a href="' . LINK_SIGNUP . '" class="button">Free Account</a></li>
@@ -140,8 +140,63 @@
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 	
 		function tpl_home() {
-				
-			get_cams ( AFFID, TRACK, $gender='', 24 );
+            $category = basename($_SERVER['SCRIPT_NAME']);
+            switch ( $category ) {
+
+                case 'female.php':
+                    $category = 'f';
+                    break;
+
+                case 'male.php':
+                    $category = 'm';
+                    break;
+
+                case 'couple.php':
+                    $category = 'c';
+                    break;
+
+                case 'shemale.php':
+                    $category = 's';
+                    break;
+
+                case 'hd.php':
+                    $category = 'hd';
+                    break;
+
+                case 'new.php':
+                    $category = 'new';
+                    break;
+
+                case 'teen.php':
+                    $category = 'teen';
+                    break;
+
+                case 'adult.php':
+                    $category = 'adult';
+                    break;
+
+                case 'middleage.php':
+                    $category = 'middleage';
+                    break;
+
+                case 'mature.php':
+                    $category = 'mature';
+                    break;
+
+                case 'senior.php':
+                    $category = 'senior';
+                    break;
+
+                case 'birthday':
+                    $category = 'birthday';
+                    break;
+
+                default:
+                    $category = '';
+
+
+            }
+            get_cams ( AFFID, TRACK, $category, 30 );
 					
 		}
 		
@@ -151,9 +206,7 @@
 					
 		}	
 		
-		function tpl_cams() {		
-		
-			$gender = array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;
+		function tpl_cams($gender) {
 		
 			switch ( $gender ) {
 				
@@ -177,6 +230,8 @@
 			get_cams ( AFFID, TRACK, $gender, 24 );
 			
 		}
+
+
 		
 		function tpl_view_cams() {
 

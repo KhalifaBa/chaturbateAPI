@@ -5,8 +5,8 @@
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		define ( 'SITENAME',		'Chaturbate Demo' );						// Your Site Name
-		define ( 'BASEHREF',		'http://your.website.com/' );				// The Url path o the index.php
-		define ( 'BASEPATH',		'/path/to/script' );						// The file directory path to index.php
+		define ( 'BASEHREF',		'http://localhost/Chaturbate-API/v1/' );				// The Url path o the index.php
+		define ( 'BASEPATH',		getcwd() );						// The file directory path to index.php
 		define ( 'USER',		'blogbabes' );								// Your Chaturbate Username ( this is only useful if you embed a personal chatroom )
 		define ( 'AFFID',		'827SM' );									// Chaturbate Affiliate ID
 		define ( 'TRACK',		'HILLI' );									// Chaturbate Campaign for Tracking
@@ -14,15 +14,15 @@
 		define ( 'ROOM',		'top' );									// Which featured chatroom to embed ( top, male, transexual, personal, NULL )
 		define ( 'CBWL',		'chaturbate.com' );							// If you are wanting to change the domain to match one of your hosted whitelabels,
 																				// enter the domain here. eg ( www.yourdomain.com ) the default is 'chaturbate.com'
-		define ( 'USECRON',		false );									// If you would like to update via cron set this to true.
+		define ( 'USECRON',		true );									// If you would like to update via cron set this to true.
 																				// Add includes/cron.php to your crontab 
-		define ( 'COLUMNS_DESKTOP',	'2u' );										// How many columns do you want to show.
-		define ( 'COLUMNS_LARGE',	'3u(large)' );								// How many columns do you want to show.
-		define ( 'COLUMNS_TABLET',	'6u(medium)' );								// How many columns do you want to show.	
-		define ( 'COLUMNS_MOBILE',	'12u(small)' );								// How many columns do you want to show.													
+		define ( 'COLUMNS_DESKTOP',	'3u' );										// How many columns do you want to show.
+		define ( 'COLUMNS_LARGE',	'4u(large)' );								// How many columns do you want to show.
+		define ( 'COLUMNS_TABLET',	'6u(medium)' );								// How many columns do you want to show.
+		define ( 'COLUMNS_MOBILE',	'12u(small)' );								// How many columns do you want to show.
 		define ( 'SHOW_STATUS', 	true );										// Shows or hides the room status public, private  ( true or false )	
 		define ( 'RELATED_SHOW',	true );										// Shows related cams on single cam page.
-		define ( 'RELATED_CNT', 	12 );										// The amount of related cams to show.
+		define ( 'RELATED_CNT', 	20 );										// The amount of related cams to show.
 		define ( 'PAGINATE',		true );										
 		define ( 'FLATFILE',		BASEPATH . '/includes/data/feed.xml');		// Name of file to store xml feed into
 		define ( 'GOOGLE',			'' );										// Google Analytics Tracking ID Leave Blank to disable
@@ -164,6 +164,7 @@
 		define ( 'TOK_BROADCASTER', 	'5bpG' );
 		define ( 'TOK_HOME', 			'4uT2' );
 		define ( 'TOK_YOURCAM', 		'O1Tt' );
+
 
 		switch (MODE) {
 

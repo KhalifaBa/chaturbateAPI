@@ -4,10 +4,10 @@
 	// Server Settings
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-		define ( 'BASEHREF',		'http://192.168.0.10/adult/chaturbate/v2.3/' );						// The Url path o the index.php
+		define ( 'BASEHREF',		'http://localhost/Chaturbate-API/v2.3/' );						// The Url path o the index.php
 		define ( 'BASEPATH',		getcwd() );									// The file directory path to index.php
 		define ( 'FLATFILE',		BASEPATH . '/includes/data/feed.xml');		// Name of file to store xml feed into
-		define ( 'USECRON',			false );									// If you would like to update via cron set this to true.
+		define ( 'USECRON',			true );									// If you would like to update via cron set this to true.
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Chaturbate Settings
@@ -38,7 +38,7 @@
 		define ( 'RELATED_CNT', 	20 );										// The amount of related cams to show.
 		define ( 'THUMB_CNT',		30 );										// How many Thumbnails to show in the cam listings.
 		define ( 'BIRTHDAY_SHOW',	true );										// Show Birthday Cams
-		define ( 'PAGINATE',		true );										
+		define ( 'PAGINATE',		true );
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Thumbnail Position Ads
@@ -167,7 +167,7 @@
 					case 3:
 					echo '
 						<p>
-							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <storng>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
+							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <strong>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
 						</p>
 					';
 					break;
@@ -177,7 +177,7 @@
 					case 4:
 					echo '
 						<p>
-							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <storng>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
+							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <strong>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
 						</p>
 					';
 					break;
@@ -187,7 +187,7 @@
 					case 5:
 					echo '
 						<p>
-							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <storng>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
+							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <strong>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
 						</p>
 					';
 					break;
@@ -197,7 +197,7 @@
 					case 6:
 					echo '
 						<p>
-							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <storng>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
+							Welcome to <strong>' . $model . '\'s live stream</strong> and chat room! Watching ' . $model . ' getting naked, fucking, sucking, etc... is <strong>completely FREE</strong>! However, to chat with ' . $model . ', view ' . $model . '\'s private profile photos and video clips, and many more member-only features... you\'ll need a <a href="' . LINK_SIGNUP . '" class="external">FREE account</a>. Right now, ' . $model . ' is responding live to viewers... <a href="' . LINK_SIGNUP . '" class="external">Create your free account</a> now to join in on the fun!
 						</p>
 					';
 					break;																									

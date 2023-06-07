@@ -4,11 +4,11 @@
 	// Thumbnails Page
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 	
-		function tpl_cams( ) {	
+		function tpl_cams($category) {
 
 			echo '<div id="main">';				
 		
-			$category = array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;
+
 		
 			switch ( $category ) {
 				
@@ -85,9 +85,9 @@
 								<li><span class="fa fa-eye"></span> ' . $cam->num_users . '</li>
 								<li><span class="fa fa-clock-o"></span> ' .  ago( $cam->seconds_online ) . '</li>
 							</ul>
-							<a href="' . BASEHREF . 'cam/' . $cam->username . '" class="button special">Watch Live Stream</a>
+							<a href="https://chaturbate.com/' . $cam->username . '" class="button special">Watch Live Stream</a>
 						</div>
-						<a href="' . BASEHREF . 'cam/' . $cam->username . '" class="link"><span>Click Me</span></a>
+						<a href="https://chaturbate.com/' . $cam->username . '" class="link"><span>Click Me</span></a>
 					</div>
 				</div>			
 			';	

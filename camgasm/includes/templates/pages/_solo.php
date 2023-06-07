@@ -68,13 +68,13 @@
 										
 								if ( MODE == 'revshare' ) {
 
-									$chatroom 	= str_replace( 'https://camgasm.com', CBWL, $cam->chat_room_url_revshare );
-									$iframe 	= str_replace( 'https://camgasm.com', CBWL, $cam->iframe_embed_revshare );
+									$chatroom 	= str_replace( 'https://chaturbate.com', CBWL, $cam->chat_room_url_revshare );
+									$iframe 	= str_replace( 'https://chaturbate.com', CBWL, $cam->iframe_embed_revshare );
 									echo $iframe;
 
 								} else {
-									$chatroom 	= str_replace( 'https://camgasm.com', CBWL, $cam->chat_room_url );
-									$iframe 	= str_replace( 'https://camgasm.com', CBWL, $cam->iframe_embed );
+									$chatroom 	= str_replace( 'https://chaturbate.com', CBWL, $cam->chat_room_url );
+									$iframe 	= str_replace( 'https://chaturbate.com', CBWL, $cam->iframe_embed );
 									echo $iframe;
 													
 								}

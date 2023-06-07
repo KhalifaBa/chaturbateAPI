@@ -4,10 +4,8 @@
 	// Thumbnails Page
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 	
-		function tpl_cams( ) {				
-		
-			$category = array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;
-		
+		function tpl_cams($category) {
+
 			switch ( $category ) {
 				
 				case 'female':
@@ -89,18 +87,18 @@
 				<article class="post">
 					<header>
 						<div class="title">
-							<h2><a href="' . BASEHREF . 'cam/' . $cam->username . '">' . $cam->display_name . '</a></h2>
+							<h2><a href="https://chaturbate.com/' . $cam->username . '">' . $cam->display_name . '</a></h2>
 							<p>' . $cam->room_subject . '</p>
 						</div>
 					</header>
 					<div class="content">
 					<div>		
 						<p>'; random_text( $cam->username, $cam->age, $cam->location, $cam->num_users, $cam->seconds_online  ); echo '</p></div>
-						<a href="' . BASEHREF . 'cam/' . $cam->username . '" class="image featured"><img src="' . $cam->image_url . '" alt="Watch ' . $cam->display_name . ' Streaming Live" /></a>
+						<a href="https://chaturbate.com/' . $cam->username . '" class="image featured"><img src="' . $cam->image_url . '" alt="Watch ' . $cam->display_name . ' Streaming Live" /></a>
 					</div>
 					<footer>
 						<ul class="actions">
-							<li><a href="' . BASEHREF . 'cam/' . $cam->username . '" class="button big">View Live Stream</a></li>
+							<li><a href="https://chaturbate.com/' . $cam->username . '" class="button big">View Live Stream</a></li>
 						</ul>
 						<ul class="stats">';
 							
@@ -143,10 +141,10 @@
 			<!-- Mini Post -->
 				<article class="mini-post">
 					<header>
-						<h3><a href="' . BASEHREF . 'cam/' . $cam->username . '">' . $cam->display_name . '</a></h3>
+						<h3><a href="https://chaturbate.com/' . $cam->username . '">' . $cam->display_name . '</a></h3>
 						<span class="published icon fa-clock-o" > ' . ago( $cam->seconds_online ) . '</span> <span class="published icon fa-comment"> ' . $cam->num_users . '</span>
 					</header>
-					<a href="' . BASEHREF . 'cam/' . $cam->username . '" class="image"><img src="' . $cam->image_url . '" alt="Watch ' . $cam->display_name . ' Streaming Live" /></a>
+					<a href="https://chaturbate.com/' . $cam->username . '" class="image"><img src="' . $cam->image_url . '" alt="Watch ' . $cam->display_name . ' Streaming Live" /></a>
 				</article>
 
 				

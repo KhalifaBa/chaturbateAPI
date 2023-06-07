@@ -4,7 +4,7 @@
 	require('includes/functions.php');
 	require('includes/templates.php');
 	require('classes/arix.class.php');
-
+    get_xml();
 	// Compress with gzip
 
 		if ( substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' ) ) {

@@ -4,7 +4,7 @@
 	// Server Settings
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-		define ( 'BASEHREF',		'http://your.tld/' );									// The Url path to the index.php include trailing slash
+		define ( 'BASEHREF',		'http://localhost/Chaturbate-API/chaturblog/' );									// The Url path to the index.php include trailing slash
 		define ( 'BASEPATH',		getcwd() );												// The file directory path to index.php
 		define ( 'FLATFILE',		BASEPATH . '/includes/data/feed.xml');					// Name of file to store xml feed into
 		define ( 'USECRON',			true );													// If you would like to update via cron set this to true.

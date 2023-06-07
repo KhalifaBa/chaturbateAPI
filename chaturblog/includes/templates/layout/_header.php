@@ -36,10 +36,10 @@
 									<h1><a href="' . BASEHREF . '">' . SITENAME . '</a></h1>
 									<nav class="links">
 										<ul>				
-											<li><a href="' . BASEHREF . 'cams/female" class="' . ( ($link == "female") ? "active"   : "") . '">Female Cams</a></li>
-											<li><a href="' . BASEHREF . 'cams/male" class="' . ( ($link == "male") ? "active"   : "") . '">Male Cams</a></li>
-											<li><a href="' . BASEHREF . 'cams/couple" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
-											<li><a href="' . BASEHREF . 'cams/shemale" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
+											<li><a href="' . BASEHREF . 'female.php" class="' . ( ($link == "female") ? "active"   : "") . '">Female Cams</a></li>
+											<li><a href="' . BASEHREF . 'male.php" class="' . ( ($link == "male") ? "active"   : "") . '">Male Cams</a></li>
+											<li><a href="' . BASEHREF . 'couple.php" class="' . ( ($link == "couple") ? "active"   : "") . '">Couples</a></li>
+											<li><a href="' . BASEHREF . 'shemale.php" class="' . ( ($link == "shemale") ? "active"   : "") . '">Shemales</a></li>
 											<li><a href="' . LINK_SIGNUP . '" class="external">Free Account</a></li>
 										</ul>
 									</nav>
@@ -66,16 +66,16 @@
 										<section>
 											<ul class="links">
 												<li><a href="' . LINK_BROADCAST . '" class="external">Become a Model</a></li>
-												<li><a href="' . BASEHREF . 'cams/hd">HD Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/new">New Cams</a></li>					
-												<li><a href="' . BASEHREF . 'cams/female">Female Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/teen">Teen Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/couple">Couple Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/middleage">Milf Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/mature">Mature Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/senior">Granny Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/male">Male Cams</a></li>
-												<li><a href="' . BASEHREF . 'cams/shemale">Shemale Cams</a></li>
+												<li><a href="' . BASEHREF . 'hd.php">HD Cams</a></li>
+												<li><a href="' . BASEHREF . 'new.php">New Cams</a></li>					
+												<li><a href="' . BASEHREF . 'female.php">Female Cams</a></li>
+												<li><a href="' . BASEHREF . 'teen.php">Teen Cams</a></li>
+												<li><a href="' . BASEHREF . 'couple.php">Couple Cams</a></li>
+												<li><a href="' . BASEHREF . 'middleage.php">Milf Cams</a></li>
+												<li><a href="' . BASEHREF . 'mature.php">Mature Cams</a></li>
+												<li><a href="' . BASEHREF . 'senior.php">Granny Cams</a></li>
+												<li><a href="' . BASEHREF . 'male.php">Male Cams</a></li>
+												<li><a href="' . BASEHREF . 'shemale.php">Shemale Cams</a></li>
 											</ul>
 										</section>
 

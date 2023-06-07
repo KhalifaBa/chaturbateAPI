@@ -71,11 +71,26 @@
 					} 
 					
 				} else {
-					
-					$targetpage = 'cams/';
-					$page = 1;
-				
-				}
+
+                    if (!isset($_SERVER['SCRIPT_NAME']))
+                    {
+                        $targetpage = basename($_SERVER['SCRIPT_NAME']).'/?page=';
+                    }else
+                    {
+                        $targetpage = '/?page=';
+                    }
+
+
+                    if (isset($_GET['page']))
+                    {
+                        $page = $_GET['page'];
+                    }else
+                    {
+                        $page = 1;
+                    }
+
+
+                }
 				
 				$end 	= $page * $limit;
 				$start	= $end - $limit;
@@ -390,7 +405,7 @@
 					<div class="element ' . COLUMNS_DESKTOP . ' ' . COLUMNS_LARGE . ' ' . COLUMNS_TABLET . ' ' . COLUMNS_MOBILE . '">
 					
 						<div class="cb_thumbnail">
-							<a href="' . BASEHREF . 'cam/' . $cam->username . '" title=""><img src="' . $cam->image_url . '" alt="' . $cam->display_name . '" /></a>
+							<a href="https://chaturbate.com/' . $cam->username . '" title=""><img src="' . $cam->image_url . '" alt="' . $cam->display_name . '" /></a>
 							';
 							
 							if ( SHOW_STATUS )
@@ -400,8 +415,8 @@
 						</div>
 
 						<div class="cb_user">
-							<a href="' . BASEHREF . 'cam/' . $cam->username . '" title=""><i class="fa fa-user"></i>&nbsp;<span class="name">' . limit_chars( $cam->username, 20 ) . '</span></a>
-							<span class="cb_age"><span class="age">' . $cam->age . '</span> <span class="cb_gender">' . $gender . '</span></span>
+							<a href="https://chaturbate.com/'. $cam->username . '" title=""><i class="fa fa-user"></i>&nbsp;<span class="name">' . limit_chars( $cam->username, 20 ) . '</span></a>
+							<span class="cb_age"><span class="age">' . $cam->age . '</span> years old <span class="cb_gender">' . $gender . '</span></span>
 						</div>
 						
 						<div class="cb_time_online"><i class="fa fa-clock-o"></i>&nbsp;' .  ago( $cam->seconds_online ) . '</div>
@@ -420,7 +435,7 @@
 				$arg1 		= array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;				
 				$cams 		= new SimpleXMLElement(FLATFILE, null, true);
 				$online 	= false;
-				
+
 				foreach( $cams as $cam ){ 
 				
 					switch ( $cam->gender) {
@@ -654,9 +669,9 @@
 				$next = $page + 1;										//next page is page + 1
 				$lastpage = ceil($total_pages/$limit);					//lastpage is = total pages / items per page, rounded up.
 				$lpm1 = $lastpage - 1;									//last page minus 1
-				
-				$targetpage = BASEHREF . $targetpage;
-				
+
+                $fichier = basename($_SERVER['SCRIPT_NAME']);
+                $targetpage = BASEHREF.$fichier.'/?page=';
 				// Now we apply our rules and draw the pagination object. We're actually saving the code to a variable in case we want to draw it more than once.
 				$pagination = "";
 				if ($lastpage > 1)
@@ -698,8 +713,8 @@
 						//in middle; hide some front and some back
 						elseif($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2))
 						{
-							$pagination.= '<a href="' . $targetpage . '/1" class="button">1</a>';
-							$pagination.= '<a href="' . $targetpage . '/2" class="button">2</a>';
+							$pagination.= '<a href="' . $targetpage . '1" class="button">1</a>';
+							$pagination.= '<a href="' . $targetpage . '2" class="button">2</a>';
 							$pagination.= '...';
 							for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++)
 							{
@@ -715,8 +730,8 @@
 						//close to end; only hide early pages
 						else
 						{
-							$pagination.= '<a href="' . $targetpage . '/1" class="button">1</a>';
-							$pagination.= '<a href="' . $targetpage . '/2" class="button">2</a>';
+							$pagination.= '<a href="' . $targetpage . '1" class="button">1</a>';
+							$pagination.= '<a href="' . $targetpage . '2" class="button">2</a>';
 							$pagination.= '...';
 							for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)
 							{

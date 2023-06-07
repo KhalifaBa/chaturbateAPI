@@ -22,6 +22,7 @@
 			$arg1 		= array_key_exists('arg1', $_GET) ? $_GET['arg1'] : null;				
 			$cams 		= new SimpleXMLElement(FLATFILE, null, true);
 			$online 	= false;
+            $found_cam=0;
 			$index 		= 0;
 				
 			foreach( $cams->resource as $cam ){ 
@@ -55,6 +56,7 @@
 				if ( $cam->username == $user ) {
 
 					$online 		= true;
+                    $found_cam=1;
 					$prev 			= $cams->resource[ $index - 1 ];
         			$next 			= $cams->resource[ $index + 1 ];
         			$time_online 	= ago( $cam->seconds_online );
@@ -66,7 +68,7 @@
 									
 					} else {
 
-						//$chatroom 	= str_replace( 'https://chaturbate.com', CBWL, $cam->chat_room_url );
+						$chatroom 	= str_replace( 'https://chaturbate.com', CBWL, $cam->chat_room_url );
 						$iframe 	= str_replace( 'https://chaturbate.com', CBWL, $cam->iframe_embed );
 														
 					}        			
@@ -110,8 +112,8 @@
 							</div>
 
 							<ul class="actions">
-								<li><a href="' . BASEHREF . 'cam/' . $prev->username . '" class="button big previous">Previous Cam</a></li>
-								<li><a href="' . BASEHREF . 'cam/' . $next->username . '" class="button big next">Next Cam</a></li>
+								<li><a href="' . BASEHREF . '/' . $prev->username . '" class="button big previous">Previous Cam</a></li>
+								<li><a href="' . BASEHREF . '/' . $next->username . '" class="button big next">Next Cam</a></li>
 							</ul>
 						</article>
 							
@@ -144,8 +146,13 @@
 				';
 
 			}
-				
-			if ( RELATED_SHOW ) {
+            if(!$found_cam)
+            {
+                // if cam was not found then
+                echo "Put the alternate display stuff for if the cam user is not on line here.";
+            }
+
+            if ( RELATED_SHOW ) {
 				
 				echo '
 					<article class="post related">

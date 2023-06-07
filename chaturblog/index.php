@@ -4,7 +4,7 @@
 
 		require('includes/settings.php');
 		require('includes/functions.php');
-
+        get_xml();
 	// Layout Templates
 
 		require('includes/templates/layout/_footer.php');		// Footer Template

@@ -63,11 +63,26 @@
 				} 
 					
 				} else {
-					
-					$targetpage = 'cams/';
-					$page = 1;
-				
-				}
+
+                    if (!isset($_SERVER['SCRIPT_NAME']))
+                    {
+                      $targetpage = basename($_SERVER['SCRIPT_NAME']).'/?page=';
+                    }else
+                     {
+                        $targetpage = '/?page=';
+                    }
+
+
+                    if (isset($_GET['page']))
+                     {
+                         $page = $_GET['page'];
+                     }else
+                     {
+                        $page = 1;
+                     }
+
+
+            }
 				
 				$end 	= $page * $limit;
 				$start	= $end - $limit;
@@ -85,7 +100,7 @@
 							if ( $category == 'hd' ) {
 
 								foreach( $doc->getElementsByTagName('is_hd') as $is_hd )  {
-									if( $is_hd->nodeValue == 'True' )
+									if( $is_hd->nodeValue == 'true' )
 										$totalCams++;
 								}
 
@@ -93,7 +108,7 @@
 							} elseif ( $category == 'new' ) {
 									
 								foreach( $doc->getElementsByTagName('is_new') as $is_new )  {
-									if( $is_new->nodeValue == 'True' )
+									if( $is_new->nodeValue == 'true' )
 										$totalCams++;
 								}									
 
@@ -192,12 +207,12 @@
 							$count++;
 						}
 
-					} elseif ( $category == 'hd' && $cam->is_hd == 'True' ) {
+					} elseif ( $category == 'hd' && $cam->is_hd == 'true' ) {
 
 						cam_rows( $cam, $count, $start, $end );
 						$count++;
 
-					} elseif ( $category == 'new' && $cam->is_new == 'True' ) {
+					} elseif ( $category == 'new' && $cam->is_new == 'true' ) {
 
 						cam_rows( $cam, $count, $start, $end );
 						$count++;
@@ -502,78 +517,41 @@
 				$next 			= $page + 1;							//next page is page + 1
 				$lastpage 		= ceil($total_pages/$limit);			//lastpage is = total pages / items per page, rounded up.
 				$lpm1 			= $lastpage - 1;						//last page minus 1
-				$targetpage 	= BASEHREF . $targetpage;
-				
-			// Now we apply our rules and draw the pagination object. We're actually saving the code to a variable in case we want to draw it more than once.
+            $fichier = basename($_SERVER['SCRIPT_NAME']);
+            $targetpage = BASEHREF.$fichier.'/?page=';
+
+            // Now we apply our rules and draw the pagination object. We're actually saving the code to a variable in case we want to draw it more than once.
 
 				$pagination 	= "";
 
-				if ($lastpage > 1) {	
+				if ($lastpage > 1) {
 
 					$pagination .= '<ul class="actions pagination">';
 
 					//previous button
 
-						if ($page > 1) 
+						if ($page > 1)
 							$pagination.= '<li><a href="' . $targetpage . $prev . '" class="previous big button">previous</a><li>';
 						else
-							$pagination.= '<li><a href="#" class="disabled previous big button">previous</a><li>';	
-					
-					
-					//pages	
+							$pagination.= '<li><a href="#" class="disabled previous big button">previous</a><li>';
+
+
+					//pages
 
 						if ($lastpage < 7 + ($adjacents * 2))	//not enough pages to bother breaking it up
-						{	
+						{
 							for ($counter = 1; $counter <= $lastpage; $counter++)
 							{
-												
-							}
-						}
-						elseif($lastpage > 5 + ($adjacents * 2))	//enough pages to hide some
-						{
-							//close to beginning; only hide later pages
-							if($page < 1 + ($adjacents * 2))		
-							{
-								for ($counter = 1; $counter < 2 + ($adjacents * 2); $counter++)
-								{
-													
-								}
-								
-							}
-							//in middle; hide some front and some back
-							elseif($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2))
-							{
-							
-								for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++)
-								{
-											
-								}
-							
-							}
-							//close to end; only hide early pages
-							else
-							{
-				
-								for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)
-								{
-						
-								}
+
 							}
 						}
 
-
-				
-					//next button
-
-						if ($page <= $counter -1 ) 
 							$pagination.= '<li><a href="' . $targetpage . $next . '" class="next big button">Next</a></li>';
-						else
-							$pagination.= '<li><a href="#" class="disabled button big next">Next</a></li>';
 
-					$pagination.= '</ul>';	
+					$pagination.= '</ul>';
 
 				}
-				
+
 			echo $pagination;
-				
+
 		}
